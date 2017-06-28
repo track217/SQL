@@ -20,3 +20,8 @@
 SELECT W2.Id 
 FROM Weather AS W1, Weather AS W2
 WHERE W2.Temperature > W1.Temperature AND TO_DAYS(W2.Date) - TO_DAYS(W1.Date) = 1
+
+还可以使用DATEDIFF函数
+SELECT W2.Id 
+FROM Weather AS W1, Weather AS W2
+WHERE DATEDIFF(W2.Date, W1.Date) = 1 AND W2.Temperature > W1.Temperature
