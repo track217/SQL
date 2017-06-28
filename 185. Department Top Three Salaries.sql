@@ -34,4 +34,4 @@ FROM Depariment AS D, Employee AS E
 WHERE D.Id = E.DepartmentId AND (SELECT COUNT(Salary)
                                  FROM Employee
                                  WHERE DepartmentId = D.Id AND Salary > E.Salary)<3
-ORDER BY D.Name,E.Salary DESC;                                 
+ORDER BY D.Name, E.Salary DESC;                                 
