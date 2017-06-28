@@ -9,19 +9,11 @@
 | 4  | Max   | 90000  | NULL      |
 +----+-------+--------+-----------+
 
-解法1：使用WHERE,1122ms
+解法一：使用 WHERE,1122ms
 SELECT E1.Name AS Employee
 FROM Employee AS E1, Employee AS E2
 WHERE E1.ManagerId = E2.Id AND E1.Salary > E2.Salary;
 
-解法2:使用JOIN联结，使用FROM ON, 1028ms
+解法二:使用 JOIN ON, 1028ms
 SELECT E1.Name AS Employee
 FROM Employee AS E1 JOIN Employee AS E2 ON (E1.ManagerId = E2.Id) AND (E1.Salary > E2.Salary);
-
-SELECT d.Name Department, e.Name Employee, Salary
-FROM Employee e, Department d
-WHERE e.DepartmentId = d.Id AND e.Salary = (
-    SELECT MAX(Salary)
-    FROM Employee
-    WHERE DepartmentId = d.Id
-)
