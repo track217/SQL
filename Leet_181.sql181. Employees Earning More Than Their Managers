@@ -1,4 +1,4 @@
-181 雇员薪水高于他的领导
+181 Employees Earning More Than Their Managers
 表Employee
 +----+-------+--------+-----------+
 | Id | Name  | Salary | ManagerId |
