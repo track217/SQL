@@ -20,7 +20,7 @@ FROM Employee
 WHERE Salary < (SELECT MAX(Salary) FROM Employee);
 
 解法二：使用LIMIT和OFFSET,设置取值的位置和个数，LIMIT只给定一个参数时，表示返回最大的记录行数，
-如果给定两个参数，则第一个参数表示返回记录行的偏移量，第二个参数同上，666ms
+如果给定两个参数，则第一个参数表示返回记录行的偏移量，第二个参数返回最大的记录行数，666ms
 SELECT 
   (
     SELECT DISTINCT Salary 
