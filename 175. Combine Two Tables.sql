@@ -1,5 +1,5 @@
 175. Combine Two Tables
-表Person
+Person
 +-------------+---------+
 | Column Name | Type    |
 +-------------+---------+
@@ -7,7 +7,7 @@
 | FirstName   | varchar |
 | LastName    | varchar |
 +-------------+---------+
-表Address
+Address
 +-------------+---------+
 | Column Name | Type    |
 +-------------+---------+
@@ -16,11 +16,12 @@
 | City        | varchar |
 | State       | varchar |
 +-------------+---------+
-
 返回
 FirstName, LastName, City, State
 
-一 使用左联结
+使用左联结
 SELECT FirstName, LastName, City, State
 FROM Person LEFT JOIN Address ON Person.PersonId = Address.PersonID;
-另一种写法，使用 USING  —— FROM Person LEFT JOIN Address USING(PersonId);
+
+SELECT FirstName, LastName, City, State
+FROM Person LEFT JOIN Address USING(PersonId);
