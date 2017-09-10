@@ -26,7 +26,7 @@
 解法一：使用 WHERE和 NOT IN, 537ms
 SELECT Name AS Customers
 FROM Customers
-WHERE Customers.Id NOT IN (SELECT Orders.CustomerId FROM Orders);
+WHERE Customers.Id NOT IN (SELECT CustomerId FROM Orders);
 
 解法二：使用 WHERE 和 NOT EXISTS,487ms
 SELECT Name AS Customers
